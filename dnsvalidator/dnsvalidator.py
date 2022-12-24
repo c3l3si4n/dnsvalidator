@@ -71,6 +71,7 @@ def resolve_address(server):
         except dns.resolver.NXDOMAIN:
             pass
         except Exception as e:
+            print(e)
             output.terminal(Level.ERROR, server,
                             "Error when checking for DNS poisoning, passing")
 
